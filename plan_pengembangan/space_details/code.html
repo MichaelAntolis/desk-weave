@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DeskWeave - Premium Workspace Detail</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "secondary": "#006a61",
+                "surface-container": "#eceef0",
+                "tertiary-fixed": "#ffdbcb",
+                "on-surface": "#191c1e",
+                "on-tertiary-fixed": "#341100",
+                "on-surface-variant": "#444651",
+                "on-secondary-fixed-variant": "#005049",
+                "on-error": "#ffffff",
+                "on-primary-fixed": "#00164e",
+                "surface": "#f7f9fb",
+                "on-secondary": "#ffffff",
+                "on-secondary-fixed": "#00201d",
+                "surface-variant": "#e0e3e5",
+                "surface-dim": "#d8dadc",
+                "tertiary-fixed-dim": "#ffb691",
+                "background": "#f7f9fb",
+                "inverse-surface": "#2d3133",
+                "on-tertiary-fixed-variant": "#773205",
+                "secondary-fixed-dim": "#6bd8cb",
+                "surface-container-lowest": "#ffffff",
+                "on-background": "#191c1e",
+                "error-container": "#ffdad6",
+                "surface-container-highest": "#e0e3e5",
+                "on-tertiary": "#ffffff",
+                "on-secondary-container": "#006f66",
+                "on-tertiary-container": "#f39461",
+                "secondary-fixed": "#89f5e7",
+                "surface-bright": "#f7f9fb",
+                "primary-fixed": "#dce1ff",
+                "inverse-on-surface": "#eff1f3",
+                "secondary-container": "#86f2e4",
+                "on-error-container": "#93000a",
+                "on-primary": "#ffffff",
+                "outline": "#757682",
+                "error": "#ba1a1a",
+                "surface-container-high": "#e6e8ea",
+                "tertiary": "#4b1c00",
+                "surface-tint": "#4059aa",
+                "primary-container": "#1e3a8a",
+                "on-primary-container": "#90a8ff",
+                "primary": "#00236f",
+                "on-primary-fixed-variant": "#264191",
+                "outline-variant": "#c5c5d3",
+                "tertiary-container": "#6e2c00",
+                "inverse-primary": "#b6c4ff",
+                "surface-container-low": "#f2f4f6",
+                "primary-fixed-dim": "#b6c4ff"
+              },
+              fontFamily: {
+                "headline": ["Manrope"],
+                "manrope": ["Manrope"],
+                "body": ["Inter"],
+                "label": ["Inter"],
+                "inter": ["Inter"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- TopNavBar (Updated per COMPONENTS_3) -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-sm">
+<div class="flex justify-between items-center px-8 py-4 w-full max-w-full">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-black tracking-tighter text-indigo-900 dark:text-indigo-400 font-manrope">DeskWeave</span>
+<div class="hidden md:flex gap-6">
+<a class="text-indigo-900 dark:text-indigo-400 font-bold border-b-2 border-teal-500 pb-1 font-manrope tracking-tight" href="#">Explore</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-slate-600 dark:text-slate-400 font-medium hover:text-teal-600 transition-colors duration-300 font-manrope tracking-tight">Login</button>
+<button class="bg-primary text-white px-6 py-2 rounded-lg font-bold scale-95 active:opacity-80 transition-all font-manrope tracking-tight">Register</button>
+</div>
+</div>
+</nav>
+<main class="pt-24 pb-12 max-w-7xl mx-auto px-8">
+<!-- Breadcrumbs -->
+<nav class="flex items-center gap-2 mb-6 text-sm text-on-surface-variant font-label">
+<a class="hover:text-primary" href="#">Explore</a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<a class="hover:text-primary" href="#">Jakarta Selatan</a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="font-semibold text-on-surface">Sudirman Private Suite</span>
+</nav>
+<!-- Editorial Photo Grid (Bento Style) -->
+<div class="grid grid-cols-4 grid-rows-2 gap-4 h-[500px] mb-12">
+<div class="col-span-2 row-span-2 relative overflow-hidden rounded-xl shadow-lg">
+<img alt="Modern minimalist office interior with large windows, designer furniture, and soft morning sunlight flooding the space" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhb9zMJBes-dDRGdpco2EfmUCJTv7MbKHw6BP9H5B9CbOO_gm333DJIjP9Di3RS9wG8IuMMO-u-sdqGtPOKe2dB2npZqrjeJYZuEzgVnxKl9_h92HSbXuB7FeqW5lWWyzpnIihaxcPkhHa3Xfn1FQ4AE0CdxW-812zajuyHLK3ZutPlCOrx2_PjFLfCFRtP_PWIZ2eXrRyBzE_QgFogzHSvruOtxturM5ON4aQE0NFtL5aCFGFv1SxLOL-iao4D2eJXVIF5pJ6u0w"/>
+<div class="absolute top-4 left-4 bg-secondary text-white px-3 py-1 rounded-full text-xs font-bold font-label uppercase tracking-widest">Premium Choice</div>
+</div>
+<div class="col-span-1 row-span-1 relative overflow-hidden rounded-xl shadow-md">
+<img alt="Close up of a wooden desk with a high-end monitor, ergonomic chair, and small green succulent plant" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCk8llKrzx1NCuSBSeXpd2VuPFy6-ezKDsCxbvzkkeGLnK1KKkLKiWpJopn99Ny5wZZFA06iYl_W2t0QArCvMuawIN9WpJojMHgGJDK0uWwx3zzv7tJe91GnHTPFhLy9lb_s8P5t-BEwkahBnJpcCRel94gchnMwu5MtMqIMBVH4fN6MNC1VgDKwYnZy_sE8W1eEJWCHf3ZpwFlbvXKLlk9zr_rFUbEMenze1vxZ8gVn4Y7dCSUiC1YFeCsWtYsBaCUg_zkqu7h_EM"/>
+</div>
+<div class="col-span-1 row-span-1 relative overflow-hidden rounded-xl shadow-md">
+<img alt="Sleek glass-walled meeting room with architectural lines and soft focused background of a city skyline" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQujlz54bBUlM0OohOUgSYlvpoCIjrQf0CCNCt9nGef0VrW3zqOqkbP_Xx9BG2_GkWROk3v6-Ngq0oTnIcvjsT-5kxr52LGEX3SUlE_HanRuWP_zjEcHRWdswufayroyjRkoIk655nwwlt50Gl-eyhEPbLlk_MsTuw01mIw2SvJYcWBW-ON2npkMNsWMC9GzCV8ev6IFj2yrDkFLuD_fCxbqvnzA2IEo-BMmrhGSXbjZEme8pvMhSCrmSjmzNJpBQ0bFTLiBN7l3c"/>
+</div>
+<div class="col-span-2 row-span-1 relative overflow-hidden rounded-xl shadow-md">
+<img alt="Spacious communal lounge area with velvet armchairs, industrial lighting, and warm atmospheric glow" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBixVQlbf3IUlce1jY1RAgJ3ryXGhciH1ZW_gs9ZpCeF73fGFK9virbCZEwXOFFr3pedQGuSB1p6VeaN14LCFtC1BP1IbH_fNIszE35x-SpczAb2keA3VXc4HEdX3xBCCFg8u9cCNc67Y-ePvXc5IK2pyehCorZTKOUU5a0Gac5KSgj5Or-057kWT4UrLmlk6m0ajLWxX2cbY7VEU0cxGxUz7bB7yvDOkY3cL7VfWRfgZVgcbDhCTz0-FRi9GxmrRkrc1Vlj_GkAFs"/>
+<button class="absolute bottom-4 right-4 bg-white/90 backdrop-blur px-4 py-2 rounded-lg font-bold text-xs flex items-center gap-2 shadow-sm">
+<span class="material-symbols-outlined text-sm">grid_view</span>
+                    View all 24 photos
+                </button>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+<!-- Left Column: Details -->
+<div class="lg:col-span-2 space-y-12">
+<!-- Header Info -->
+<section>
+<div class="flex justify-between items-start mb-4">
+<div>
+<h1 class="text-4xl font-black font-headline text-primary tracking-tight leading-none mb-2">Sudirman Private Suite</h1>
+<div class="flex items-center gap-2 text-on-surface-variant font-label text-sm">
+<span class="material-symbols-outlined text-secondary text-base">location_on</span>
+                                SCBD, Jakarta Selatan • 1.2km from MRT Istora Mandiri
+                            </div>
+</div>
+<div class="flex gap-2">
+<button class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined">share</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+</div>
+<p class="text-on-surface-variant leading-relaxed max-w-2xl font-body">
+                        Designed for creative architects and digital nomads. This space offers a curated blend of industrial aesthetics and high-performance utility. Experience a quiet, authoritative environment that respects your focus and elevates your professional presence.
+                    </p>
+</section>
+<!-- Facilities -->
+<section>
+<h3 class="text-xl font-bold font-headline mb-6">Premium Facilities</h3>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-y-6 gap-x-4">
+<div class="flex items-center gap-3 group">
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center group-hover:bg-secondary-container transition-colors">
+<span class="material-symbols-outlined text-secondary" data-icon="wifi">wifi</span>
+</div>
+<span class="text-sm font-medium font-label">Fiber Optic 1Gbps</span>
+</div>
+<div class="flex items-center gap-3 group">
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center group-hover:bg-secondary-container transition-colors">
+<span class="material-symbols-outlined text-secondary" data-icon="coffee">coffee</span>
+</div>
+<span class="text-sm font-medium font-label">Artisan Coffee Bar</span>
+</div>
+<div class="flex items-center gap-3 group">
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center group-hover:bg-secondary-container transition-colors">
+<span class="material-symbols-outlined text-secondary" data-icon="print">print</span>
+</div>
+<span class="text-sm font-medium font-label">High-end Printing</span>
+</div>
+<div class="flex items-center gap-3 group">
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center group-hover:bg-secondary-container transition-colors">
+<span class="material-symbols-outlined text-secondary" data-icon="ac_unit">ac_unit</span>
+</div>
+<span class="text-sm font-medium font-label">Climate Controlled</span>
+</div>
+<div class="flex items-center gap-3 group">
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center group-hover:bg-secondary-container transition-colors">
+<span class="material-symbols-outlined text-secondary" data-icon="meeting_room">meeting_room</span>
+</div>
+<span class="text-sm font-medium font-label">Smart Meeting Pods</span>
+</div>
+<div class="flex items-center gap-3 group">
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center group-hover:bg-secondary-container transition-colors">
+<span class="material-symbols-outlined text-secondary" data-icon="lock">lock</span>
+</div>
+<span class="text-sm font-medium font-label">Private Lockers</span>
+</div>
+</div>
+</section>
+<!-- Space Rules -->
+<section class="bg-surface-container-low p-8 rounded-xl border-l-4 border-secondary">
+<h3 class="text-lg font-bold font-headline mb-4">Workspace Etiquette</h3>
+<ul class="space-y-3 font-body text-sm text-on-surface-variant">
+<li class="flex gap-2">
+<span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            Quiet hours observed between 14:00 - 16:00.
+                        </li>
+<li class="flex gap-2">
+<span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            Outside food permitted only in the lounge area.
+                        </li>
+<li class="flex gap-2">
+<span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            Maximum 2 guests per booking for meeting pods.
+                        </li>
+</ul>
+</section>
+<!-- Location Preview -->
+<section>
+<h3 class="text-xl font-bold font-headline mb-6">Location</h3>
+<div class="h-64 bg-surface-container rounded-xl overflow-hidden shadow-inner relative">
+<img alt="Abstract map representation of a luxury urban district with geometric shapes and minimalist styling" class="w-full h-full object-cover opacity-50 grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCs9h2GKId7Fxjgq-t6NG559ACGiJIosD4GTJrHp6lA1GVmSu3-PvrKtBVCW2lT0fnyji0ntKQFUgwJ7Ezng74_OD4na7vMZhT7QR2D7X9mqbcnywtbMX93J3EODurJhSfCo-AF4V_rIRTWT__U0OMSOGZSnVRL7fgbxU9K5Lop52skPREuarL9rjqNLWGMxs7wb0tjEvR2tlQqKmDEEEsfkyCyg0tPAYXwGxD6Whr8xbT1VeUlWoippeJu4Fi-Su2BrMKwoyhwsC4"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center shadow-2xl animate-pulse">
+<span class="material-symbols-outlined text-white">location_on</span>
+</div>
+</div>
+</div>
+<div class="mt-4 flex justify-between items-center">
+<span class="text-sm font-medium font-label text-on-surface-variant">Sudirman Central Business District, Lot 11</span>
+<a class="text-secondary font-bold text-sm underline" href="#">View on Maps</a>
+</div>
+</section>
+</div>
+<!-- Right Column: Booking Widget -->
+<div class="lg:col-span-1">
+<div class="sticky top-28 bg-surface-container-lowest p-6 rounded-2xl shadow-[0_20px_40px_rgba(0,35,111,0.05)] border border-surface-variant/20">
+<div class="flex items-end gap-1 mb-6">
+<span class="text-2xl font-black font-headline text-primary">Rp 120.000</span>
+<span class="text-on-surface-variant font-label text-sm mb-1">/ hour</span>
+</div>
+<!-- Custom Calendar Widget (React-Day-Picker style) -->
+<div class="mb-6 p-4 bg-surface rounded-xl">
+<div class="flex justify-between items-center mb-4">
+<span class="text-sm font-bold font-headline">November 2024</span>
+<div class="flex gap-2">
+<span class="material-symbols-outlined text-sm cursor-pointer">chevron_left</span>
+<span class="material-symbols-outlined text-sm cursor-pointer">chevron_right</span>
+</div>
+</div>
+<div class="grid grid-cols-7 gap-2 text-center">
+<!-- Weekdays -->
+<div class="text-[10px] font-bold text-on-surface-variant uppercase font-label">Su</div>
+<div class="text-[10px] font-bold text-on-surface-variant uppercase font-label">Mo</div>
+<div class="text-[10px] font-bold text-on-surface-variant uppercase font-label">Tu</div>
+<div class="text-[10px] font-bold text-on-surface-variant uppercase font-label">We</div>
+<div class="text-[10px] font-bold text-on-surface-variant uppercase font-label">Th</div>
+<div class="text-[10px] font-bold text-on-surface-variant uppercase font-label">Fr</div>
+<div class="text-[10px] font-bold text-on-surface-variant uppercase font-label">Sa</div>
+<!-- Sample Dates -->
+<div class="text-xs py-2 text-outline-variant">27</div>
+<div class="text-xs py-2 text-outline-variant">28</div>
+<div class="text-xs py-2 text-outline-variant">29</div>
+<div class="text-xs py-2 text-outline-variant">30</div>
+<div class="text-xs py-2 text-outline-variant">31</div>
+<div class="text-xs py-2 hover:bg-primary-container/10 rounded-md cursor-pointer transition-colors">1</div>
+<div class="text-xs py-2 hover:bg-primary-container/10 rounded-md cursor-pointer transition-colors">2</div>
+<div class="text-xs py-2 hover:bg-primary-container/10 rounded-md cursor-pointer transition-colors">3</div>
+<div class="text-xs py-2 hover:bg-primary-container/10 rounded-md cursor-pointer transition-colors">4</div>
+<div class="text-xs py-2 hover:bg-primary-container/10 rounded-md cursor-pointer transition-colors">5</div>
+<div class="text-xs py-2 bg-primary text-white rounded-md font-bold shadow-md cursor-pointer">6</div>
+<div class="text-xs py-2 hover:bg-primary-container/10 rounded-md cursor-pointer transition-colors">7</div>
+<div class="text-xs py-2 hover:bg-primary-container/10 rounded-md cursor-pointer transition-colors">8</div>
+<div class="text-xs py-2 hover:bg-primary-container/10 rounded-md cursor-pointer transition-colors">9</div>
+</div>
+</div>
+<!-- Booking Options -->
+<div class="space-y-4 mb-8">
+<div>
+<label class="block text-xs font-bold font-label text-on-surface-variant uppercase tracking-wider mb-2">Duration</label>
+<div class="grid grid-cols-2 gap-2">
+<button class="py-2 px-3 border border-secondary rounded-lg text-secondary font-bold text-xs flex items-center justify-center gap-2 bg-secondary/5">
+                                    4 Hours
+                                </button>
+<button class="py-2 px-3 border border-outline-variant rounded-lg text-on-surface-variant font-medium text-xs flex items-center justify-center gap-2 hover:bg-surface-container transition-colors">
+                                    Full Day
+                                </button>
+</div>
+</div>
+<div>
+<label class="block text-xs font-bold font-label text-on-surface-variant uppercase tracking-wider mb-2">Workspace Type</label>
+<select class="w-full bg-surface-container-low border-none rounded-lg text-sm font-label focus:ring-2 focus:ring-secondary py-3">
+<option>Window Desk (Dedicated)</option>
+<option>Private Booth</option>
+<option>Meeting Suite</option>
+</select>
+</div>
+</div>
+<!-- Price Breakdown -->
+<div class="space-y-2 mb-8 pt-4 border-t border-surface-variant/30">
+<div class="flex justify-between text-sm font-body">
+<span class="text-on-surface-variant">4 Hours x Rp 120.000</span>
+<span class="font-bold">Rp 480.000</span>
+</div>
+<div class="flex justify-between text-sm font-body">
+<span class="text-on-surface-variant">Service Fee</span>
+<span class="font-bold">Rp 25.000</span>
+</div>
+<div class="flex justify-between pt-4 text-lg font-black font-headline text-primary">
+<span>Total</span>
+<span>Rp 505.000</span>
+</div>
+</div>
+<button class="w-full bg-gradient-to-r from-primary to-primary-container text-white py-4 rounded-xl font-bold font-headline shadow-lg hover:opacity-90 active:scale-[0.98] transition-all">
+                        Pesan &amp; Lanjut Bayar
+                    </button>
+<p class="text-center text-[10px] text-on-surface-variant font-label mt-4">
+                        Secure payments processed via DeskWeave Architect Network.
+                    </p>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer (Updated per COMPONENTS_3) -->
+<footer class="bg-slate-50 dark:bg-slate-950 w-full py-12 px-8 mt-24">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-7xl mx-auto">
+<div class="col-span-1 md:col-span-1">
+<span class="text-lg font-black text-indigo-900 dark:text-indigo-400 font-manrope">DeskWeave</span>
+<p class="mt-4 text-xs font-inter uppercase tracking-widest text-slate-400 leading-loose">
+                    © 2024 DeskWeave. The Digital Architect's Workspace.
+                </p>
+</div>
+<div class="space-y-4">
+<h4 class="text-xs font-bold font-inter uppercase tracking-widest text-indigo-900 dark:text-indigo-400">Company</h4>
+<ul class="space-y-2">
+<li><a class="text-xs font-inter uppercase tracking-widest text-slate-400 hover:text-indigo-900 dark:hover:text-white transition-colors" href="#">About</a></li>
+<li><a class="text-xs font-inter uppercase tracking-widest text-slate-400 hover:text-indigo-900 dark:hover:text-white transition-colors" href="#">Contact Us</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="text-xs font-bold font-inter uppercase tracking-widest text-indigo-900 dark:text-indigo-400">Support</h4>
+<ul class="space-y-2">
+<li><a class="text-xs font-inter uppercase tracking-widest text-slate-400 hover:text-indigo-900 dark:hover:text-white transition-colors" href="#">Help Center</a></li>
+<li><a class="text-xs font-inter uppercase tracking-widest text-slate-400 hover:text-indigo-900 dark:hover:text-white transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-xs font-inter uppercase tracking-widest text-slate-400 hover:text-indigo-900 dark:hover:text-white transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="text-xs font-bold font-inter uppercase tracking-widest text-indigo-900 dark:text-indigo-400">Social</h4>
+<div class="flex gap-4">
+<div class="w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center cursor-pointer hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined text-sm">public</span>
+</div>
+<div class="w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center cursor-pointer hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined text-sm">alternate_email</span>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

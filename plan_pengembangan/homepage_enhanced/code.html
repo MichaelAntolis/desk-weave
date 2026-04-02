@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DeskWeave - Arsitek Ruang Kerja Digital Anda</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary": "#006a61",
+              "surface-container": "#eceef0",
+              "tertiary-fixed": "#ffdbcb",
+              "on-surface": "#191c1e",
+              "on-tertiary-fixed": "#341100",
+              "on-surface-variant": "#444651",
+              "on-secondary-fixed-variant": "#005049",
+              "on-error": "#ffffff",
+              "on-primary-fixed": "#00164e",
+              "surface": "#f7f9fb",
+              "on-secondary": "#ffffff",
+              "on-secondary-fixed": "#00201d",
+              "surface-variant": "#e0e3e5",
+              "surface-dim": "#d8dadc",
+              "tertiary-fixed-dim": "#ffb691",
+              "background": "#f7f9fb",
+              "inverse-surface": "#2d3133",
+              "on-tertiary-fixed-variant": "#773205",
+              "secondary-fixed-dim": "#6bd8cb",
+              "surface-container-lowest": "#ffffff",
+              "on-background": "#191c1e",
+              "error-container": "#ffdad6",
+              "surface-container-highest": "#e0e3e5",
+              "on-tertiary": "#ffffff",
+              "on-secondary-container": "#006f66",
+              "on-tertiary-container": "#f39461",
+              "secondary-fixed": "#89f5e7",
+              "surface-bright": "#f7f9fb",
+              "primary-fixed": "#dce1ff",
+              "inverse-on-surface": "#eff1f3",
+              "secondary-container": "#86f2e4",
+              "on-error-container": "#93000a",
+              "on-primary": "#ffffff",
+              "outline": "#757682",
+              "error": "#ba1a1a",
+              "surface-container-high": "#e6e8ea",
+              "tertiary": "#4b1c00",
+              "surface-tint": "#4059aa",
+              "primary-container": "#1e3a8a",
+              "on-primary-container": "#90a8ff",
+              "primary": "#00236f",
+              "on-primary-fixed-variant": "#264191",
+              "outline-variant": "#c5c5d3",
+              "tertiary-container": "#6e2c00",
+              "inverse-primary": "#b6c4ff",
+              "surface-container-low": "#f2f4f6",
+              "primary-fixed-dim": "#b6c4ff"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"],
+              "manrope": ["Manrope"],
+              "inter": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "3xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-effect {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+        .scroll-reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-outline-variant/20">
+<div class="flex justify-between items-center px-8 py-4 w-full max-w-full">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-black tracking-tighter text-indigo-900 dark:text-indigo-400">DeskWeave</span>
+<div class="hidden md:flex space-x-8 items-center">
+<a class="text-primary font-bold border-b-2 border-secondary pb-1 font-manrope tracking-tight hover:text-secondary transition-colors duration-300" href="#">Eksplorasi</a>
+<a class="text-on-surface-variant font-medium font-manrope tracking-tight hover:text-primary transition-colors duration-300" href="#">Lokasi</a>
+<a class="text-on-surface-variant font-medium font-manrope tracking-tight hover:text-primary transition-colors duration-300" href="#">Untuk Perusahaan</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-on-surface-variant font-semibold font-manrope hover:text-secondary transition-colors duration-300 px-4 py-2">Masuk</button>
+<button class="bg-primary text-white px-8 py-2.5 rounded-lg font-manrope font-bold hover:bg-secondary transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 active:translate-y-0">Daftar</button>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="pt-32 pb-16 md:pt-48 md:pb-32 px-8 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="space-y-10">
+<div class="space-y-4">
+<span class="inline-block px-4 py-1 bg-secondary/10 text-secondary text-xs font-bold uppercase tracking-widest rounded-full font-label">The Professional Anchor</span>
+<h1 class="text-6xl md:text-8xl font-extrabold font-headline text-primary tracking-tight leading-[1.05]">
+                        Arsitektur <span class="text-secondary italic">Hari Kerja</span> Ideal Anda.
+                    </h1>
+</div>
+<p class="text-xl text-on-surface-variant max-w-lg leading-relaxed font-light">
+                    DeskWeave mengkurasi ruang kerja performa tinggi untuk arsitek digital modern. Tanpa distraksi, hanya desain yang penuh makna.
+                </p>
+<!-- Main Search Bar -->
+<div class="relative group max-w-2xl">
+<div class="flex flex-col md:flex-row items-stretch md:items-center bg-surface-container-lowest shadow-2xl rounded-2xl p-2 focus-within:ring-2 ring-secondary/20 transition-all duration-300">
+<div class="flex-1 flex items-center px-4 py-3 md:py-0 md:border-r border-outline-variant/30">
+<span class="material-symbols-outlined text-secondary mr-3" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 w-full font-body text-on-surface text-lg" placeholder="Di mana Anda ingin bekerja?" type="text"/>
+</div>
+<div class="px-8 py-3 md:py-0 border-t md:border-t-0 md:border-r border-outline-variant/30">
+<span class="text-[10px] block font-bold text-on-surface-variant font-label uppercase mb-1">Durasi</span>
+<select class="bg-transparent border-none p-0 focus:ring-0 text-sm font-bold text-primary cursor-pointer w-full">
+<option>Jam-jaman</option>
+<option>Harian</option>
+<option>Bulanan</option>
+</select>
+</div>
+<button class="bg-primary text-white md:aspect-square md:w-16 h-14 md:h-16 rounded-xl flex items-center justify-center hover:bg-secondary transition-all shadow-lg active:scale-95">
+<span class="material-symbols-outlined font-bold" data-icon="east">east</span>
+</button>
+</div>
+</div>
+<div class="flex flex-wrap gap-3 pt-2">
+<span class="px-5 py-2 bg-white border border-outline-variant/30 rounded-full text-xs font-semibold text-on-surface-variant shadow-sm">Quiet Zone</span>
+<span class="px-5 py-2 bg-white border border-outline-variant/30 rounded-full text-xs font-semibold text-on-surface-variant shadow-sm">High-Speed WiFi</span>
+<span class="px-5 py-2 bg-white border border-outline-variant/30 rounded-full text-xs font-semibold text-on-surface-variant shadow-sm">Premium Coffee Bar</span>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl relative z-10 border-[12px] border-white">
+<img alt="ruang kantor minimalis mewah dengan jendela besar dan furnitur desainer" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCBXedVmJ-7UU1a0ff4GN7HEHjrJhjFAyyTEc-i94do9LeBSsY1-F1dvcHKUZwbjebN6G82FhwQYbIUAF8GcOYiBJRO9vNpxPZwguT7ow3rQlegZpYUpIFlqVIyFd9jq5IvjdTeg8P_oA6V-XkH6w42UjkZuuq14a17G27rb526tdOTsYbsrLofUOTEN_qMyJT9UP1ywGBa5Sk6nkSGd1uYA7snntvb_Vwxuo2e1D0Nj3fUM_KCn6fyXx8WQflpYWNXCExkAWB_5E"/>
+</div>
+<div class="absolute -bottom-10 -left-10 bg-secondary p-8 rounded-2xl shadow-2xl z-20 text-white space-y-3 hidden xl:block max-w-[200px]">
+<span class="material-symbols-outlined text-4xl" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+<p class="font-headline font-bold text-2xl leading-tight">Kurasi Unggulan</p>
+<p class="text-[10px] uppercase tracking-widest opacity-80">Terverifikasi 100%</p>
+</div>
+<div class="absolute -top-12 -right-12 w-80 h-80 bg-secondary/10 rounded-full blur-3xl -z-10"></div>
+<div class="absolute bottom-1/4 -right-8 w-40 h-40 bg-primary/10 rounded-full blur-2xl -z-10"></div>
+</div>
+</section>
+<!-- Why Choose Section -->
+<section class="py-24 bg-white">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center space-y-4 mb-20">
+<h2 class="text-4xl font-extrabold font-headline text-primary tracking-tight">Kenapa Memilih DeskWeave?</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto font-light">Standar emas untuk produktivitas digital, dirancang khusus untuk kenyamanan dan fokus maksimal.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="p-10 rounded-3xl bg-surface hover:bg-white hover:shadow-xl transition-all duration-500 group border border-transparent hover:border-outline-variant/20">
+<div class="w-16 h-16 bg-secondary/10 rounded-2xl flex items-center justify-center text-secondary mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl" data-icon="wifi">wifi</span>
+</div>
+<h3 class="text-xl font-bold font-headline text-primary mb-4">Koneksi Ultra Cepat</h3>
+<p class="text-on-surface-variant leading-relaxed">WiFi dedicated dengan kecepatan hingga 1Gbps untuk kelancaran video call dan upload data besar tanpa hambatan.</p>
+</div>
+<div class="p-10 rounded-3xl bg-surface hover:bg-white hover:shadow-xl transition-all duration-500 group border border-transparent hover:border-outline-variant/20">
+<div class="w-16 h-16 bg-secondary/10 rounded-2xl flex items-center justify-center text-secondary mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl" data-icon="coffee">coffee</span>
+</div>
+<h3 class="text-xl font-bold font-headline text-primary mb-4">Kopi Kualitas Premium</h3>
+<p class="text-on-surface-variant leading-relaxed">Akses tak terbatas ke bar kopi artisan. Biji kopi pilihan untuk menjaga energi dan kreativitas Anda sepanjang hari.</p>
+</div>
+<div class="p-10 rounded-3xl bg-surface hover:bg-white hover:shadow-xl transition-all duration-500 group border border-transparent hover:border-outline-variant/20">
+<div class="w-16 h-16 bg-secondary/10 rounded-2xl flex items-center justify-center text-secondary mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl" data-icon="groups">groups</span>
+</div>
+<h3 class="text-xl font-bold font-headline text-primary mb-4">Komunitas Terkurasi</h3>
+<p class="text-on-surface-variant leading-relaxed">Berjejaring dengan para profesional, kreator, dan inovator terpilih dalam lingkungan yang kolaboratif.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Spaces Section -->
+<section class="bg-surface-container-low py-32">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div class="space-y-4">
+<h2 class="text-4xl font-extrabold font-headline text-primary tracking-tight">Ruang Kerja Pilihan</h2>
+<p class="text-on-surface-variant max-w-md font-light text-lg">Lingkungan yang ditata sempurna, dipilih berdasarkan nilai estetika arsitektur dan presisi fungsional.</p>
+</div>
+<a class="text-secondary font-bold font-label text-sm uppercase tracking-widest flex items-center gap-3 group" href="#">
+                        Lihat Semua Ruang <span class="material-symbols-outlined text-sm group-hover:translate-x-2 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Featured Large Card -->
+<div class="md:col-span-8 group cursor-pointer">
+<div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 h-full border border-outline-variant/10">
+<div class="aspect-[16/9] relative overflow-hidden">
+<img alt="studio kreatif luas dengan jendela industri" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKAVP_1spUxp-2ri3ii-7XwoncUXGqpH1dOhIEttcAfq3rV0nuw8u5WtSEdpFzIHVhEBUyITayRGLmMI99hkP2An-NqEpKR8buTvatGp1h8dJuQW789BAh7RIb8xT4jHyq1rHXmt9QFP3FzZG05GtM44jazo2oNU-U0HQc7LVoOJ1Di8nbNHXxObw5QUTmZxXbov7uVF16sL3POsAr-SES6VxgffhnuzgDPUD_Gscc7oJC-_6GC3s2flFqnOB_R_ofu4_nJuQpilU"/>
+<div class="absolute top-6 left-6 bg-secondary text-white px-4 py-1.5 rounded-lg text-xs font-bold uppercase tracking-widest flex items-center gap-2 backdrop-blur-md shadow-lg">
+<span class="w-2 h-2 bg-white rounded-full animate-pulse"></span> Tersedia Sekarang
+                                </div>
+<div class="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/60 to-transparent">
+<div class="flex justify-between items-end text-white">
+<div>
+<h3 class="text-3xl font-bold font-headline">The Obsidian Studio</h3>
+<p class="opacity-80 text-sm mt-1 flex items-center gap-2"><span class="material-symbols-outlined text-xs" data-icon="location_on">location_on</span> Creative District • London</p>
+</div>
+<div class="text-right">
+<span class="text-3xl font-black font-headline">IDR 450k</span>
+<span class="text-xs font-bold block uppercase opacity-80">/ hari</span>
+</div>
+</div>
+</div>
+</div>
+<div class="p-8 flex gap-8 items-center border-t border-surface-container-high overflow-x-auto">
+<div class="flex items-center gap-2 text-on-surface-variant whitespace-nowrap">
+<span class="material-symbols-outlined text-lg text-secondary" data-icon="wifi">wifi</span>
+<span class="text-xs font-semibold">1 Gbps Fiber</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant whitespace-nowrap">
+<span class="material-symbols-outlined text-lg text-secondary" data-icon="chair_alt">chair_alt</span>
+<span class="text-xs font-semibold">Herman Miller Embody</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant whitespace-nowrap">
+<span class="material-symbols-outlined text-lg text-secondary" data-icon="group">group</span>
+<span class="text-xs font-semibold">Hingga 12 Orang</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant whitespace-nowrap ml-auto">
+<span class="material-symbols-outlined text-lg text-secondary" data-icon="star">star</span>
+<span class="text-xs font-bold">4.9 (120 Ulasan)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Small Cards Side Column -->
+<div class="md:col-span-4 flex flex-col gap-8">
+<div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 group cursor-pointer border border-outline-variant/10">
+<div class="aspect-video relative overflow-hidden">
+<img alt="kantor eksekutif minimalis" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNTZv919uPPO-YyCXTAzcZD5A82AlYVzNYcoZhPok1sWxbuzPPhWfaGH9MRxWS68eEGeHf--gL0tes25DIWx4p-2FpjcRp2QD4CI9Y0tmoqwEgrrnZXXgAD9aAHoGKLQZJ7YQDa8YNdOGwTVjO3Zf30Z6Jt59XxY-ZMbpRLCqhhzDIoLL4qValpU2mGnCsW6qX3P8x1YF6YB0W4SoAxlSE3fnfW9eRlHAU4XXyXJ42yAPuCw68e_AzQHptf4mSh0rDWhqtc7Iw3uQ"/>
+<button class="absolute top-4 right-4 w-10 h-10 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:bg-white hover:text-error transition-colors">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div class="p-6 space-y-3">
+<h3 class="text-xl font-bold font-headline text-primary">Zen Executive Suite</h3>
+<p class="text-xs text-on-surface-variant font-medium uppercase tracking-wider">Downtown • Singapore</p>
+<div class="flex justify-between items-center pt-2">
+<span class="text-2xl font-black text-secondary font-headline">IDR 600k<span class="text-[10px] text-on-surface-variant font-bold">/hari</span></span>
+<button class="bg-primary/5 hover:bg-primary hover:text-white p-2 rounded-lg transition-all">
+<span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 group cursor-pointer border border-outline-variant/10">
+<div class="aspect-video relative overflow-hidden">
+<img alt="lounge komunitas coworking" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-NOBO4fV0140qnUeF6utpZlVHNc_6Zlm1fkwzanWy2ItNDmBSxQ2C5l6-ZBz_K2n8WgdrS8F2F5pemmzBiXg3PJVsz21M5ymviUX8fIIqVYUTMq2mrNtM53YMMvRAKDD_by7pPKZxWAdvXsHT9AgfUzfmG-UoEbV_vVD1biy3qTYUqgrRhwpQCmEgo4r7rLAnqdiVJuiSunoo2wQ4izGnesLuBOQWtN3mWrm3HuFdzfCQCpIhmvQyhlMEKL4zS8Dpa9pbE3ypxqA"/>
+<button class="absolute top-4 right-4 w-10 h-10 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:bg-white hover:text-error transition-colors">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div class="p-6 space-y-3">
+<h3 class="text-xl font-bold font-headline text-primary">The Loft Lounge</h3>
+<p class="text-xs text-on-surface-variant font-medium uppercase tracking-wider">SoHo • New York</p>
+<div class="flex justify-between items-center pt-2">
+<span class="text-2xl font-black text-secondary font-headline">IDR 300k<span class="text-[10px] text-on-surface-variant font-bold">/hari</span></span>
+<button class="bg-primary/5 hover:bg-primary hover:text-white p-2 rounded-lg transition-all">
+<span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- How It Works Section -->
+<section class="py-32 px-8 max-w-7xl mx-auto overflow-hidden">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+<div class="space-y-12">
+<div class="space-y-4">
+<h2 class="text-4xl font-extrabold font-headline text-primary tracking-tight">Mulai Dalam Hitungan Detik</h2>
+<p class="text-on-surface-variant text-lg font-light leading-relaxed">Proses pemesanan yang mulus, dirancang untuk efisiensi waktu Anda.</p>
+</div>
+<div class="space-y-10">
+<div class="flex gap-8 group">
+<div class="w-14 h-14 bg-secondary text-white rounded-2xl flex-shrink-0 flex items-center justify-center font-bold text-xl shadow-lg shadow-secondary/30 group-hover:scale-110 transition-transform">1</div>
+<div class="space-y-2">
+<h4 class="text-xl font-bold font-headline text-primary">Cari Lokasi</h4>
+<p class="text-on-surface-variant">Temukan ruang kerja di kota Anda yang sesuai dengan gaya dan kebutuhan spesifik Anda.</p>
+</div>
+</div>
+<div class="flex gap-8 group">
+<div class="w-14 h-14 bg-primary text-white rounded-2xl flex-shrink-0 flex items-center justify-center font-bold text-xl shadow-lg shadow-primary/30 group-hover:scale-110 transition-transform">2</div>
+<div class="space-y-2">
+<h4 class="text-xl font-bold font-headline text-primary">Pesan Instan</h4>
+<p class="text-on-surface-variant">Pilih jadwal dan durasi. Konfirmasi instan tanpa harus menunggu proses administrasi yang rumit.</p>
+</div>
+</div>
+<div class="flex gap-8 group">
+<div class="w-14 h-14 bg-secondary-container text-secondary rounded-2xl flex-shrink-0 flex items-center justify-center font-bold text-xl shadow-lg group-hover:scale-110 transition-transform">3</div>
+<div class="space-y-2">
+<h4 class="text-xl font-bold font-headline text-primary">Mulai Bekerja</h4>
+<p class="text-on-surface-variant">Datang, akses ruang dengan QR Code, dan nikmati fasilitas kelas dunia yang sudah kami siapkan.</p>
+</div>
+</div>
+</div>
+<button class="bg-primary text-white px-10 py-4 rounded-xl font-bold shadow-xl hover:bg-secondary transition-all flex items-center gap-3">
+                        Coba Sekarang <span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+<div class="relative bg-surface-container rounded-3xl p-12 lg:p-20 flex justify-center items-center">
+<img alt="ilustrasi modern pemesanan ruang kerja" class="w-full max-w-md drop-shadow-2xl hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTuCgG2ULIJ5hQd9GTBMqUaM89ZkEnp5mjAOo9HjvtlorsbCKDJvBNR09T7rWGBGqAGVXpzbXjHPacMc-ByK8jV9Kji6ANan-9vSozDtC3NSFtGyn-Z8FXSwbJ_PpV0XYkuZff2g1ian1gWWNJpOe2EbecJWjQCJXN2FhpOOS92Sk3bivLB052mxWqw3r9cBGojs9LXBdC0NkxgTun5XNmgf6U7NMF62beBvofzRMPrRfPrZMeXnIPw7Eda-iRBtZfPj6PC2lrQwc"/>
+<!-- Decorative Elements -->
+<div class="absolute top-10 right-10 w-24 h-24 bg-secondary/10 rounded-full blur-xl animate-pulse"></div>
+<div class="absolute bottom-10 left-10 w-32 h-32 bg-primary/10 rounded-full blur-2xl"></div>
+</div>
+</div>
+</section>
+<!-- Testimonials Section -->
+<section class="py-24 bg-primary text-white">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="md:col-span-1 space-y-6">
+<span class="text-secondary-fixed-dim font-bold tracking-widest text-xs uppercase">Kisah Mereka</span>
+<h2 class="text-4xl font-extrabold font-headline leading-tight">Apa yang Dikatakan Para Digital Nomad.</h2>
+<div class="flex gap-2 text-secondary-fixed-dim">
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-primary-container font-medium">Berdasarkan lebih dari 10,000 ulasan positif di seluruh dunia.</p>
+</div>
+<div class="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-8">
+<div class="bg-white/10 backdrop-blur-md p-10 rounded-3xl border border-white/10 hover:bg-white/20 transition-all">
+<p class="text-lg italic leading-relaxed mb-8 opacity-90">"DeskWeave mengubah cara saya bekerja. Saya tidak lagi stres mencari WiFi yang stabil. Semuanya sudah terjamin."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden border-2 border-secondary">
+<img alt="User portrait" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkZ5xKq_Vi8x95W-f-dLrA9YsjD23abSBRvKpC6bqJvqUbPHhU0DX5isXO3Mn5mJs8Uy13an_13LSqqfGmwR_fQtaI3OpmHcxiyEJTTVkcpaDGGzBqO1A9dybH8hT96WJhIn447JRD7SbtbnX7zpbVQcVfde3UhSWNirBPK7YKmP3PIPQF6qnufnQorlHXIQy7rfQEuH7qH_3w_6CkukyYejN6qXqiUI1wscTg6ydiYOvp7cSns0SGVNRHl7UTN2Qc6eCxIU9U15o"/>
+</div>
+<div>
+<h5 class="font-bold">Budi Santoso</h5>
+<p class="text-xs opacity-60">UI/UX Designer, Tokopedia</p>
+</div>
+</div>
+</div>
+<div class="bg-white/10 backdrop-blur-md p-10 rounded-3xl border border-white/10 hover:bg-white/20 transition-all">
+<p class="text-lg italic leading-relaxed mb-8 opacity-90">"Estetika ruangannya luar biasa. Sangat menginspirasi kreativitas. Kopi yang disediakan juga juara!"</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden border-2 border-secondary">
+<img alt="User portrait" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0qx6kQ4_UyojCGprz47fsLml-ugHQA_-uZu39UFi0eMBMsNpT1JwzrzCJr2v8ZpKSM11TGIYYVwdAAra3Y1YL2FqRSNCaVA1KC4F7LfN6JX50qyKwUSBlAbx5RtVsTZAaFr86R9V74WdLJC_F-Fu9J9SVx-wL88RvrAIVE0beRu33De6u8-jtdtdXKNWdRtQees_nJSPvRQDGAlhE6nI6Mk8GlgGpDlIQYQh0klC8XzIshn4-tpVt4uY2x1Qt7g5HcJN_1-YmhC8"/>
+</div>
+<div>
+<h5 class="font-bold">Sari Wijaya</h5>
+<p class="text-xs opacity-60">Creative Director, Gojek</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter Section -->
+<section class="py-24 px-8 max-w-7xl mx-auto">
+<div class="bg-secondary rounded-[2.5rem] p-12 md:p-24 relative overflow-hidden shadow-2xl shadow-secondary/20">
+<div class="absolute top-0 right-0 w-1/2 h-full opacity-10">
+<img alt="pola arsitektur abstrak" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCx_WKJGJrmqpAqMuwFS63iyFXz0lRdLnTkjEs1xOrpTUJTMY6Zm5jvlJg21N-otKG-2U4yRflEiqV1LNFyHxuRbY03DnIadnCC-k4Eqg0q2bevwF0bn2JLVeZUGNJE3uUFg9pVPRxy4rMzynXu0TCO6--48QCQ0BEJjeFXbH3OLyhIUFUZvZZZ8_M2DETXuAUrpMSnYxBjY94aco7isFr51wamJgmaLrieMjykizJ9ef1gtHgOScScSFM5ljCISqr8v1GVsJ9dmIU"/>
+</div>
+<div class="relative z-10 max-w-2xl space-y-10">
+<div class="space-y-4">
+<span class="text-xs font-black uppercase tracking-[0.4em] text-white/60 font-label">The Weekly Archive</span>
+<h2 class="text-4xl md:text-6xl font-extrabold font-headline text-white leading-[1.1]">
+                            Kurasi ruang kerja global di inbox Anda.
+                        </h2>
+</div>
+<form class="flex flex-col md:flex-row gap-4 max-w-lg" onsubmit="event.preventDefault()">
+<input class="bg-white/10 border-white/20 text-white placeholder:text-white/40 rounded-xl px-6 py-5 focus:ring-white/30 focus:border-white/30 flex-1 backdrop-blur-md outline-none text-lg transition-all" placeholder="Email profesional Anda" type="email"/>
+<button class="bg-white text-secondary font-black px-10 py-5 rounded-xl hover:bg-primary hover:text-white transition-all duration-500 shadow-xl active:scale-95">Langganan</button>
+</form>
+<div class="flex items-center gap-4">
+<div class="flex -space-x-3">
+<div class="w-8 h-8 rounded-full border-2 border-secondary overflow-hidden"><img alt="" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjKcNLYGH1bkVaqZhUfgXnDUa0mHatdpIJaDCVT10GxjpB0-eEdvNBGJkI8Ds7mAeJoOcyDNnKw4qW-LDCP6aNS6er6Q2kNF-nKmY7o8f0bwa_3VlV0Cqr4MCIzDnH6IxEmEfFtmKB010mvsTV8plsD15dubetookA8OR7AK4cEK94PqFEvXR8N3pu_z-AOmEjpsbEJZH1GfnRGNNYXvK_apx7aK0F-wFQZK94T9_MrdyLIlWnEWqzS7UMhiafpm1YGJ7XfjArd-k"/></div>
+<div class="w-8 h-8 rounded-full border-2 border-secondary overflow-hidden"><img alt="" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAm7ldAO9e1AS6UzSadFIjAShg_4bc9OWIZxoYrjyyeIBU2Oce9ulmK9gPGLuSlqqehis7EurDU50da9VmsSDXyhuHfpCef_d2jB1s1ZKlpASzDCI-mEvh-jeJ3m5RQOedHI8uBQfNxTjBdR8WdId95kB_iWlUm-eYCDgHb_T5KPtkVjXAGG1PSeS-XvSxAz6i-l8HAYEB6vk7G5GEkQ4hN496t8lupgS732mTsUkZ_IiTvr2AaveHS4UrBXk79oy5t_Vjo3JWuU14"/></div>
+<div class="w-8 h-8 rounded-full border-2 border-secondary overflow-hidden"><img alt="" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCqlbK6voWP37v6eP4_ATIUgKh_8Qwos5EQNoncYUJXt6QSLwcx1zyypU7PdJF3srzQL0TKswxh6HRr3DBmS2YAG7vf0B3_LtNhK4tUblklCRmSWXdk2G6Y7oNaw1W7Ct-U-UjbYcePUQMWGwtOlYKIMFee32-0XUn8JOj2RksUhpd1-3PprZMLc-K4KaIIyv4iHConBdIV6jBkf1I5fYxzGREhyrceI_85sppzgLD8hd07RZzs6Kfg2IuNKxcEkK3kFGdz7dANBA"/></div>
+</div>
+<p class="text-white/60 text-sm font-medium">Bergabung dengan 24.000+ arsitek masa depan.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-white py-24 border-t border-outline-variant/10">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-12 gap-16 md:gap-8">
+<div class="md:col-span-5 space-y-8">
+<span class="text-3xl font-black tracking-tighter text-indigo-900">DeskWeave</span>
+<p class="text-on-surface-variant font-light leading-relaxed max-w-sm text-lg">
+                    Kami tidak hanya menyewakan meja. Kami menyediakan panggung bagi karya besar Anda berikutnya. Temukan ruang yang menginspirasi.
+                </p>
+<div class="flex gap-6">
+<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#"><span class="material-symbols-outlined text-xl">share</span></a>
+<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#"><span class="material-symbols-outlined text-xl">public</span></a>
+<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#"><span class="material-symbols-outlined text-xl">mail</span></a>
+</div>
+</div>
+<div class="md:col-span-2 space-y-6">
+<h6 class="font-bold font-headline text-primary uppercase text-xs tracking-widest">Eksplorasi</h6>
+<ul class="space-y-4 text-on-surface-variant font-medium">
+<li><a class="hover:text-secondary transition-colors" href="#">Shared Desks</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Meeting Rooms</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Private Studios</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Event Spaces</a></li>
+</ul>
+</div>
+<div class="md:col-span-2 space-y-6">
+<h6 class="font-bold font-headline text-primary uppercase text-xs tracking-widest">Perusahaan</h6>
+<ul class="space-y-4 text-on-surface-variant font-medium">
+<li><a class="hover:text-secondary transition-colors" href="#">Tentang Kami</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Karir</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Kontak</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Blog</a></li>
+</ul>
+</div>
+<div class="md:col-span-3 space-y-6">
+<h6 class="font-bold font-headline text-primary uppercase text-xs tracking-widest">Legal</h6>
+<ul class="space-y-4 text-on-surface-variant font-medium">
+<li><a class="hover:text-secondary transition-colors" href="#">Kebijakan Privasi</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Syarat &amp; Ketentuan</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Keamanan</a></li>
+</ul>
+<p class="pt-8 text-xs text-on-surface-variant/60">© 2024 DeskWeave. Seluruh hak cipta dilindungi.</p>
+</div>
+</div>
+</footer>
+<script>
+        // Simple scroll reveal observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('scroll-reveal');
+            observer.observe(section);
+        });
+        
+        // Initial check for visibility on load
+        window.addEventListener('load', () => {
+            document.querySelectorAll('section').forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top < window.innerHeight) {
+                    section.classList.add('visible');
+                }
+            });
+        });
+    </script>
+</body></html>

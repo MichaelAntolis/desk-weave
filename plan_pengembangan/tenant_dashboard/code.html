@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary": "#006a61",
+              "surface-container": "#eceef0",
+              "tertiary-fixed": "#ffdbcb",
+              "on-surface": "#191c1e",
+              "on-tertiary-fixed": "#341100",
+              "on-surface-variant": "#444651",
+              "on-secondary-fixed-variant": "#005049",
+              "on-error": "#ffffff",
+              "on-primary-fixed": "#00164e",
+              "surface": "#f7f9fb",
+              "on-secondary": "#ffffff",
+              "on-secondary-fixed": "#00201d",
+              "surface-variant": "#e0e3e5",
+              "surface-dim": "#d8dadc",
+              "tertiary-fixed-dim": "#ffb691",
+              "background": "#f7f9fb",
+              "inverse-surface": "#2d3133",
+              "on-tertiary-fixed-variant": "#773205",
+              "secondary-fixed-dim": "#6bd8cb",
+              "surface-container-lowest": "#ffffff",
+              "on-background": "#191c1e",
+              "error-container": "#ffdad6",
+              "surface-container-highest": "#e0e3e5",
+              "on-tertiary": "#ffffff",
+              "on-secondary-container": "#006f66",
+              "on-tertiary-container": "#f39461",
+              "secondary-fixed": "#89f5e7",
+              "surface-bright": "#f7f9fb",
+              "primary-fixed": "#dce1ff",
+              "inverse-on-surface": "#eff1f3",
+              "secondary-container": "#86f2e4",
+              "on-error-container": "#93000a",
+              "on-primary": "#ffffff",
+              "outline": "#757682",
+              "error": "#ba1a1a",
+              "surface-container-high": "#e6e8ea",
+              "tertiary": "#4b1c00",
+              "surface-tint": "#4059aa",
+              "primary-container": "#1e3a8a",
+              "on-primary-container": "#90a8ff",
+              "primary": "#00236f",
+              "on-primary-fixed-variant": "#264191",
+              "outline-variant": "#c5c5d3",
+              "tertiary-container": "#6e2c00",
+              "inverse-primary": "#b6c4ff",
+              "surface-container-low": "#f2f4f6",
+              "primary-fixed-dim": "#b6c4ff"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"],
+              "manrope": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .tonal-transition { transition: background-color 0.3s ease; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body min-h-screen flex">
+<!-- SideNavBar (Tenant Portal) -->
+<aside class="hidden md:flex flex-col h-screen w-64 bg-slate-50 dark:bg-slate-950 border-r-0 fixed left-0 top-0 z-40 p-4 space-y-2">
+<div class="mb-8 px-2">
+<h1 class="text-xl font-bold text-indigo-900 font-manrope">Tenant Portal</h1>
+<p class="text-xs text-slate-500 font-medium font-manrope">Manage your workspace</p>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:text-indigo-700 hover:bg-white/50 dark:hover:bg-slate-800 transition-all duration-300 rounded-lg font-manrope text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Dashboard</span>
+</a>
+<!-- Active Tab: My Bookings -->
+<a class="flex items-center gap-3 px-4 py-3 bg-white dark:bg-slate-900 text-indigo-900 dark:text-teal-400 shadow-sm rounded-lg font-bold translate-x-1 transition-transform font-manrope text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="event_available">event_available</span>
+<span>My Bookings</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:text-indigo-700 hover:bg-white/50 dark:hover:bg-slate-800 transition-all duration-300 rounded-lg font-manrope text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span>Profile</span>
+</a>
+</nav>
+<div class="pt-4 mt-4 border-t border-slate-200/50">
+<div class="flex items-center gap-3 px-4 py-2">
+<div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container text-xs font-bold">JD</div>
+<div class="flex flex-col overflow-hidden">
+<span class="text-xs font-bold truncate">John Doe</span>
+<span class="text-[10px] text-slate-400 truncate">john@deskweave.com</span>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Canvas -->
+<main class="flex-1 md:ml-64 min-h-screen bg-surface">
+<!-- Header TopBar -->
+<header class="bg-white/80 backdrop-blur-xl sticky top-0 w-full z-30 px-8 py-6 flex justify-between items-center">
+<div>
+<h2 class="text-2xl font-extrabold text-indigo-900 tracking-tight font-headline">Pemesanan Saya</h2>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-xs font-label uppercase tracking-widest text-on-surface-variant">Home</span>
+<span class="material-symbols-outlined text-xs text-on-surface-variant">chevron_right</span>
+<span class="text-xs font-label uppercase tracking-widest text-primary">Bookings</span>
+</div>
+</div>
+<div class="flex gap-4">
+<button class="p-2 rounded-full hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="notifications">notifications</span>
+</button>
+<div class="hidden sm:flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-md font-bold text-sm shadow-sm cursor-pointer hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+<span>Cari Workspace</span>
+</div>
+</div>
+</header>
+<section class="px-8 py-8">
+<!-- Filter Bar (Chips Pattern) -->
+<div class="flex gap-3 mb-10 overflow-x-auto pb-2">
+<button class="px-5 py-2 bg-primary text-white rounded-full text-xs font-bold shadow-md">Semua</button>
+<button class="px-5 py-2 bg-surface-container-high text-on-surface-variant rounded-full text-xs font-bold hover:bg-surface-container-highest transition-colors">Pending</button>
+<button class="px-5 py-2 bg-surface-container-high text-on-surface-variant rounded-full text-xs font-bold hover:bg-surface-container-highest transition-colors">Confirmed</button>
+<button class="px-5 py-2 bg-surface-container-high text-on-surface-variant rounded-full text-xs font-bold hover:bg-surface-container-highest transition-colors">Completed</button>
+<button class="px-5 py-2 bg-surface-container-high text-on-surface-variant rounded-full text-xs font-bold hover:bg-surface-container-highest transition-colors">Cancelled</button>
+</div>
+<!-- Booking List Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+<!-- Booking Card 1 -->
+<div class="group bg-surface-container-lowest rounded-xl p-6 shadow-[0_4px_20px_rgba(0,35,111,0.03)] hover:shadow-[0_20px_40px_rgba(0,35,111,0.06)] transition-all duration-300 flex flex-col sm:flex-row gap-6">
+<div class="relative w-full sm:w-40 h-40 flex-shrink-0">
+<img alt="Modern Office" class="w-full h-full object-cover rounded-lg" data-alt="Modern minimalist co-working space with large windows, wooden desks, and ergonomic chairs in soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWgfqCExrR_w7r1caLGhCzXhSo-OFN0pEyC_r9tpBlQa8GwURIFWE33Eyp-Y50v2_lXMfzTNMkWWP4YRRrx5SQDZFs6d5HpQDof5JIVw3-7j55-GZrJqAgDFXEyrNg719a49bBF-aO0TK1vcKtKLbuLAJOvs6TP6M4Bl0TVitxBJlKlpSngUdeSmJ9_INfedGpiueFWURYzPQ1qCMyjDjwUofzEwfgP-tnhpxzN84sebEiZu7sKPMDiviKDMhixHO9xIOHP6lZ59k"/>
+<div class="absolute top-2 left-2 px-3 py-1 bg-secondary text-white rounded-full text-[10px] font-bold uppercase tracking-wider">Confirmed</div>
+</div>
+<div class="flex flex-col justify-between flex-1">
+<div>
+<h3 class="text-lg font-bold text-indigo-900 font-headline leading-tight">Elite Executive Suite - Sudirman Central</h3>
+<p class="text-sm text-on-surface-variant mt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span>
+                                Jakarta Selatan, Indonesia
+                            </p>
+</div>
+<div class="mt-4 pt-4 border-t border-surface-container border-dashed">
+<div class="flex justify-between items-center">
+<div>
+<p class="text-[10px] uppercase font-bold text-slate-400 tracking-tighter">Tanggal Sewa</p>
+<p class="text-sm font-bold text-indigo-900">24 Okt - 26 Okt 2024</p>
+</div>
+<div class="text-right">
+<p class="text-[10px] uppercase font-bold text-slate-400 tracking-tighter">Total Bayar</p>
+<p class="text-sm font-black text-indigo-900">Rp 1.250.000</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Booking Card 2 -->
+<div class="group bg-surface-container-lowest rounded-xl p-6 shadow-[0_4px_20px_rgba(0,35,111,0.03)] hover:shadow-[0_20px_40px_rgba(0,35,111,0.06)] transition-all duration-300 flex flex-col sm:flex-row gap-6">
+<div class="relative w-full sm:w-40 h-40 flex-shrink-0">
+<img alt="Creative Studio" class="w-full h-full object-cover rounded-lg" data-alt="Creative studio workspace with plants, industrial lighting, and colorful decor in a bright airy setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAj6aVVx107igiI-ZyLGZHEIC7thaLa1Faj79vKVJpDq4FrUi18eRtFI2TlR2u9P8_rl1Q7cojObxi1V3s6PQvY_2e9HGis5P6XsGP_QgDJpCWMaLk-uCfTVmRJ_cRwEpuBSfQI3RTIMvZa9FYQYOS0IYYpHgRSeLQUlOqKVZPNldbxAUsiyB1pEG3uupaMM-jTrCt98z4Sb704Fm6-x34qscPUBXq5f0NgGBaqpMu1d-w-4HcK-8O3-cqjSYJiLvYukgCL7TYOB0"/>
+<div class="absolute top-2 left-2 px-3 py-1 bg-amber-500 text-white rounded-full text-[10px] font-bold uppercase tracking-wider">Pending</div>
+</div>
+<div class="flex flex-col justify-between flex-1">
+<div>
+<h3 class="text-lg font-bold text-indigo-900 font-headline leading-tight">Creative Sandbox - Studio B</h3>
+<p class="text-sm text-on-surface-variant mt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span>
+                                Bandung, West Java
+                            </p>
+</div>
+<div class="mt-4 pt-4 border-t border-surface-container border-dashed">
+<div class="flex justify-between items-center">
+<div>
+<p class="text-[10px] uppercase font-bold text-slate-400 tracking-tighter">Tanggal Sewa</p>
+<p class="text-sm font-bold text-indigo-900">12 Nov 2024</p>
+</div>
+<div class="text-right">
+<p class="text-[10px] uppercase font-bold text-slate-400 tracking-tighter">Total Bayar</p>
+<p class="text-sm font-black text-indigo-900">Rp 450.000</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Booking Card 3 (Completed) -->
+<div class="group bg-surface-container-lowest rounded-xl p-6 shadow-[0_4px_20px_rgba(0,35,111,0.03)] hover:shadow-[0_20px_40px_rgba(0,35,111,0.06)] transition-all duration-300 flex flex-col sm:flex-row gap-6 opacity-80">
+<div class="relative w-full sm:w-40 h-40 flex-shrink-0">
+<img alt="Meeting Room" class="w-full h-full object-cover rounded-lg grayscale" data-alt="Sleek glass meeting room with a large wooden table and premium office chairs at dusk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhT6FTFA8cY94vMN8cP6SONlMIeRHAH6GlsUigvzM6Nxr9Ur-VPgGwY5Bk94jSZtxDGj9ufK4SPa9TZadGwAcJGzjz3bwpF5rKO83DFq9KnXCgTXDrMmp6ttZLP6ECow9R0-l7PYmgwtspZlsY3V9_OHA366VlG3EJJ77MY7eH_2O2wmBlOKyLjsA2I9gNWtouAPTu46Ir7j8-aHlPP_ctaK_iK29OrN80S4v_ExWPi4ESopARIGNCWPWQNuZQuxZeHvha-eVYJw8"/>
+<div class="absolute top-2 left-2 px-3 py-1 bg-slate-400 text-white rounded-full text-[10px] font-bold uppercase tracking-wider">Completed</div>
+</div>
+<div class="flex flex-col justify-between flex-1">
+<div>
+<h3 class="text-lg font-bold text-indigo-900 font-headline leading-tight">Boardroom Alpha - Mega Kuningan</h3>
+<p class="text-sm text-on-surface-variant mt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span>
+                                Jakarta Selatan
+                            </p>
+</div>
+<div class="mt-4 pt-4 border-t border-surface-container border-dashed">
+<div class="flex justify-between items-center">
+<div>
+<p class="text-[10px] uppercase font-bold text-slate-400 tracking-tighter">Tanggal Sewa</p>
+<p class="text-sm font-bold text-indigo-900">10 Okt 2024</p>
+</div>
+<div class="text-right">
+<p class="text-[10px] uppercase font-bold text-slate-400 tracking-tighter">Total Bayar</p>
+<p class="text-sm font-black text-indigo-900">Rp 850.000</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Empty State Illustration (Hidden) -->
+<div class="hidden flex-col items-center justify-center py-24 text-center">
+<div class="w-64 h-64 bg-surface-container-low rounded-full flex items-center justify-center mb-8">
+<img alt="No bookings" class="w-48 h-48 object-contain opacity-40 mix-blend-multiply" data-alt="Isometric 3D illustration of a futuristic floating empty office chair with a digital calendar background in soft blue and white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpqlobevn10EBklLe1goQf_aMdPd0tJ35Gtd1lNgY6zIJpsD7e0ruwPavrzpbkkzG1-74Ny13CvjBLnNWeulWbq-i6k8dCxEXJmAjovMb1pnS3_uFT3f5IoGcJb2PFB_YMdloeStwynyyrPSZ-dVKKz6UznOWh51HEpMe_i64L533GTo-Qcq7Ivj32_lcNel7OWPiVUKQ9M3ajVolfuepbbreNITa-oNTUzoyi7JEWjmk9d4XHhw5wejedrkxw-rj6LD3Mnzlp9kQ"/>
+</div>
+<h4 class="text-xl font-bold text-indigo-900 font-headline">Belum Ada Pemesanan</h4>
+<p class="text-on-surface-variant mt-2 max-w-xs mx-auto">Mulai jelajahi ruang kerja impian Anda dan lakukan pemesanan pertama hari ini.</p>
+<button class="mt-8 px-8 py-3 bg-primary text-white rounded-md font-bold text-sm shadow-md hover:opacity-90 transition-opacity">
+                    Jelajahi Ruang
+                </button>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 mt-24 bg-slate-50 dark:bg-slate-950">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-7xl mx-auto">
+<div class="col-span-1 md:col-span-2">
+<span class="text-lg font-black text-indigo-900 dark:text-indigo-400 tracking-tighter">DeskWeave</span>
+<p class="text-slate-400 font-inter text-xs uppercase tracking-widest mt-4">© 2024 DeskWeave. The Digital Architect's Workspace.</p>
+</div>
+<div class="flex flex-col space-y-3">
+<a class="text-slate-400 hover:text-indigo-900 dark:hover:text-white transition-colors text-xs uppercase tracking-widest font-inter" href="#">Privacy Policy</a>
+<a class="text-slate-400 hover:text-indigo-900 dark:hover:text-white transition-colors text-xs uppercase tracking-widest font-inter" href="#">Terms of Service</a>
+<a class="text-slate-400 hover:text-indigo-900 dark:hover:text-white transition-colors text-xs uppercase tracking-widest font-inter" href="#">About</a>
+</div>
+<div class="flex flex-col space-y-3 text-right">
+<a class="text-slate-400 hover:text-indigo-900 dark:hover:text-white transition-colors text-xs uppercase tracking-widest font-inter" href="#">Help Center</a>
+<a class="text-slate-400 hover:text-indigo-900 dark:hover:text-white transition-colors text-xs uppercase tracking-widest font-inter" href="#">Contact Us</a>
+</div>
+</div>
+</footer>
+</main>
+<!-- Bottom Navigation (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-white/95 backdrop-blur-md border-t-0 shadow-[0_-5px_15px_rgba(0,0,0,0.05)] z-50 flex justify-around items-center py-3">
+<a class="flex flex-col items-center text-slate-400" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="text-[10px] font-bold">Dashboard</span>
+</a>
+<a class="flex flex-col items-center text-primary" href="#">
+<span class="material-symbols-outlined" data-icon="event_available" style="font-variation-settings: 'FILL' 1;">event_available</span>
+<span class="text-[10px] font-bold">Bookings</span>
+</a>
+<a class="flex flex-col items-center text-slate-400" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-[10px] font-bold">Profile</span>
+</a>
+</nav>
+</body></html>

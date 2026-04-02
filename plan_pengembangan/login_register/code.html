@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DeskWeave - Join the Digital Architect's Workspace</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary": "#006a61",
+              "surface-container": "#eceef0",
+              "tertiary-fixed": "#ffdbcb",
+              "on-surface": "#191c1e",
+              "on-tertiary-fixed": "#341100",
+              "on-surface-variant": "#444651",
+              "on-secondary-fixed-variant": "#005049",
+              "on-error": "#ffffff",
+              "on-primary-fixed": "#00164e",
+              "surface": "#f7f9fb",
+              "on-secondary": "#ffffff",
+              "on-secondary-fixed": "#00201d",
+              "surface-variant": "#e0e3e5",
+              "surface-dim": "#d8dadc",
+              "tertiary-fixed-dim": "#ffb691",
+              "background": "#f7f9fb",
+              "inverse-surface": "#2d3133",
+              "on-tertiary-fixed-variant": "#773205",
+              "secondary-fixed-dim": "#6bd8cb",
+              "surface-container-lowest": "#ffffff",
+              "on-background": "#191c1e",
+              "error-container": "#ffdad6",
+              "surface-container-highest": "#e0e3e5",
+              "on-tertiary": "#ffffff",
+              "on-secondary-container": "#006f66",
+              "on-tertiary-container": "#f39461",
+              "secondary-fixed": "#89f5e7",
+              "surface-bright": "#f7f9fb",
+              "primary-fixed": "#dce1ff",
+              "inverse-on-surface": "#eff1f3",
+              "secondary-container": "#86f2e4",
+              "on-error-container": "#93000a",
+              "on-primary": "#ffffff",
+              "outline": "#757682",
+              "error": "#ba1a1a",
+              "surface-container-high": "#e6e8ea",
+              "tertiary": "#4b1c00",
+              "surface-tint": "#4059aa",
+              "primary-container": "#1e3a8a",
+              "on-primary-container": "#90a8ff",
+              "primary": "#00236f",
+              "on-primary-fixed-variant": "#264191",
+              "outline-variant": "#c5c5d3",
+              "tertiary-container": "#6e2c00",
+              "inverse-primary": "#b6c4ff",
+              "surface-container-low": "#f2f4f6",
+              "primary-fixed-dim": "#b6c4ff"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"],
+              "manrope": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-effect {
+        backdrop-filter: blur(12px);
+        background-color: rgba(247, 249, 251, 0.8);
+      }
+      .gradient-primary {
+        background: linear-gradient(135deg, #00236f 0%, #1e3a8a 100%);
+      }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface min-h-screen flex flex-col">
+<!-- Top Navigation updated to match COMPONENTS_3 TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-sm">
+<div class="flex justify-between items-center px-8 py-4 w-full max-w-full">
+<div class="text-2xl font-black tracking-tighter text-indigo-900 dark:text-indigo-400 font-manrope">DeskWeave</div>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-teal-600 transition-colors duration-300 font-manrope" href="#">Explore</a>
+<span class="h-4 w-px bg-slate-100 dark:bg-slate-800"></span>
+<button class="text-indigo-900 dark:text-indigo-400 font-manrope tracking-tight font-bold scale-95 active:opacity-80 transition-all hover:text-teal-600">Register</button>
+<button class="text-indigo-900 dark:text-indigo-400 font-manrope tracking-tight font-bold scale-95 active:opacity-80 transition-all hover:text-teal-600">Login</button>
+</div>
+</div>
+</header>
+<main class="flex-grow flex items-stretch pt-20">
+<!-- Visual Column -->
+<div class="hidden lg:flex w-1/2 relative overflow-hidden bg-primary-container">
+<div class="absolute inset-0 z-0">
+<img alt="Workspace Interior" class="w-full h-full object-cover opacity-40 mix-blend-overlay" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEgSbEmavmA61Vh5STcWwR9fFpmKSaLu7kjqXXaWU_dpiBF1YCzGYVFL3-mZOTIDGuLx_RS6_6CSmQCcfWcaKFWYHwnCrYQgCh-ujg0l0i8Rqc8-eo8Ws6vGhN17C7vqEmhRm5aEvnpXuyf5R-jq0iHjDfuh33SqLrMAeOAbKRGodro4SS4iMIA_F3jrjllSrXwdIPuWiZjRP7dwdC57wchFx5tamnwh13z9qKQkMCx7SPMEcJw1epMco-sCl9N1W-xXFBt5tZW9k"/>
+</div>
+<div class="relative z-10 p-16 flex flex-col justify-center max-w-xl">
+<span class="text-secondary-fixed font-label font-bold uppercase tracking-widest mb-4">The Digital Architect</span>
+<h1 class="text-5xl font-headline font-extrabold text-white leading-tight mb-6 tracking-tighter">
+                    Ruang kerja yang terkurasi untuk produktivitas maksimal.
+                </h1>
+<p class="text-primary-fixed-dim text-lg leading-relaxed mb-10">
+                    Masuki ekosistem ruang kerja paling cerdas di Indonesia. Baik Anda seorang pengembara digital atau pemilik properti yang ingin memaksimalkan aset.
+                </p>
+<div class="grid grid-cols-2 gap-6">
+<div class="p-6 rounded-xl bg-white/10 backdrop-blur-md border border-white/10">
+<span class="material-symbols-outlined text-teal-400 mb-2">dashboard</span>
+<h3 class="text-white font-bold">Smart Management</h3>
+<p class="text-white/60 text-xs mt-1">Kelola pemesanan dengan sekali ketuk.</p>
+</div>
+<div class="p-6 rounded-xl bg-white/10 backdrop-blur-md border border-white/10">
+<span class="material-symbols-outlined text-teal-400 mb-2">verified_user</span>
+<h3 class="text-white font-bold">Verified Spaces</h3>
+<p class="text-white/60 text-xs mt-1">Kualitas ruang terjamin dan terkurasi.</p>
+</div>
+</div>
+</div>
+<!-- Aesthetic Floating Element -->
+<div class="absolute bottom-10 right-10 bg-white/5 backdrop-blur-xl p-4 rounded-2xl border border-white/10 flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden border-2 border-teal-500">
+<img alt="User" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgwvH1qWTckEPInH8BD75dFfODQHxPW8prwDRfAXpz0jLvnJBmEwi2vbatFqpmtpIIyWL5fhvm5P3xtPaP5eqe4FpkwfIGsNKDLPaG1AdYjcPll4-InAEf-QSUl7MztmCZgggeXwede5R9WH94pzTFm4X197tCOHASPZP4X0YE6BmC1vpgHDs-ja1dJEJkCYWeAESucVQTkPI_c1jTFF-AxJo91NI0u4T7qc6Kckxc4y8qVLjO9ZemjdZn0EMzFQitsTsdsvLgZ74"/>
+</div>
+<div>
+<p class="text-white text-sm font-bold">"Efisiensi meningkat 40%"</p>
+<p class="text-white/50 text-xs">Ahmad, Digital Architect</p>
+</div>
+</div>
+</div>
+<!-- Form Column -->
+<div class="w-full lg:w-1/2 flex items-center justify-center p-8 md:p-16">
+<div class="w-full max-w-md">
+<div class="mb-10">
+<h2 class="text-3xl font-headline font-extrabold text-on-surface tracking-tight">Selamat Datang</h2>
+<p class="text-on-surface-variant mt-2">Mulai perjalanan Anda di ekosistem DeskWeave.</p>
+</div>
+<form class="space-y-6">
+<!-- Role Selection (Asymmetric Bento Style) -->
+<div class="space-y-3">
+<label class="text-sm font-label font-semibold text-on-surface-variant block">Pilih Peran Anda</label>
+<div class="grid grid-cols-2 gap-4">
+<label class="relative group cursor-pointer">
+<input checked="" class="peer sr-only" name="role" type="radio" value="tenant"/>
+<div class="p-4 rounded-xl bg-surface-container-low border-2 border-transparent peer-checked:border-secondary peer-checked:bg-white transition-all duration-300">
+<div class="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-secondary">person</span>
+</div>
+<span class="block font-bold text-on-surface">Penyewa</span>
+<span class="block text-[10px] text-on-surface-variant uppercase tracking-wider mt-1">Cari Ruang Kerja</span>
+</div>
+</label>
+<label class="relative group cursor-pointer">
+<input class="peer sr-only" name="role" type="radio" value="owner"/>
+<div class="p-4 rounded-xl bg-surface-container-low border-2 border-transparent peer-checked:border-secondary peer-checked:bg-white transition-all duration-300">
+<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary">storefront</span>
+</div>
+<span class="block font-bold text-on-surface">Pemilik</span>
+<span class="block text-[10px] text-on-surface-variant uppercase tracking-wider mt-1">Kelola Properti</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Input Fields -->
+<div class="space-y-4">
+<div class="space-y-2">
+<label class="text-sm font-label font-medium text-on-surface-variant" for="name">Nama Lengkap</label>
+<input class="w-full px-4 py-3 rounded-lg bg-surface-container-lowest border-none shadow-sm focus:ring-2 focus:ring-secondary transition-all outline-none" id="name" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-label font-medium text-on-surface-variant" for="email">Email Bisnis</label>
+<input class="w-full px-4 py-3 rounded-lg bg-surface-container-lowest border-none shadow-sm focus:ring-2 focus:ring-secondary transition-all outline-none" id="email" placeholder="name@company.com" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-label font-medium text-on-surface-variant" for="password">Password</label>
+<div class="relative">
+<input class="w-full px-4 py-3 rounded-lg bg-surface-container-lowest border-none shadow-sm focus:ring-2 focus:ring-secondary transition-all outline-none" id="password" placeholder="••••••••" type="password"/>
+<button class="absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant" type="button">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Terms -->
+<div class="flex items-start gap-3">
+<div class="flex items-center h-5">
+<input class="w-4 h-4 text-secondary border-outline-variant rounded focus:ring-secondary" id="terms" type="checkbox"/>
+</div>
+<label class="text-xs text-on-surface-variant leading-relaxed" for="terms">
+                            Saya menyetujui <a class="text-indigo-900 font-bold hover:underline" href="#">Syarat &amp; Ketentuan</a> serta <a class="text-indigo-900 font-bold hover:underline" href="#">Kebijakan Privasi</a> DeskWeave.
+                        </label>
+</div>
+<!-- CTA -->
+<button class="w-full py-4 rounded-lg gradient-primary text-white font-bold text-lg shadow-xl shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all" type="submit">
+                        Daftar Sekarang
+                    </button>
+<!-- Social Login -->
+<div class="relative py-4">
+<div class="absolute inset-0 flex items-center"><div class="w-full border-t border-surface-container-highest"></div></div>
+<div class="relative flex justify-center text-xs uppercase"><span class="bg-surface px-2 text-on-surface-variant font-medium">Atau daftar dengan</span></div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<button class="flex items-center justify-center gap-2 py-3 px-4 rounded-lg bg-surface-container-lowest shadow-sm hover:bg-surface-container transition-colors" type="button">
+<svg class="w-5 h-5" viewbox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="currentColor"></path><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="currentColor"></path><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="currentColor"></path><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="currentColor"></path></svg>
+<span class="text-sm font-medium">Google</span>
+</button>
+<button class="flex items-center justify-center gap-2 py-3 px-4 rounded-lg bg-surface-container-lowest shadow-sm hover:bg-surface-container transition-colors" type="button">
+<svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482C19.137 20.164 22 16.418 22 12c0-5.523-4.477-10-10-10z"></path></svg>
+<span class="text-sm font-medium">GitHub</span>
+</button>
+</div>
+</form>
+<p class="mt-8 text-center text-sm text-on-surface-variant">
+                    Lupa password? <a class="text-secondary font-bold hover:underline" href="#">Reset di sini</a>
+</p>
+</div>
+</div>
+</main>
+<!-- Footer removed as per request -->
+</body></html>

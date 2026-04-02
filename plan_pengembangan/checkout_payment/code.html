@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Checkout - DeskWeave</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary": "#006a61",
+              "surface-container": "#eceef0",
+              "tertiary-fixed": "#ffdbcb",
+              "on-surface": "#191c1e",
+              "on-tertiary-fixed": "#341100",
+              "on-surface-variant": "#444651",
+              "on-secondary-fixed-variant": "#005049",
+              "on-error": "#ffffff",
+              "on-primary-fixed": "#00164e",
+              "surface": "#f7f9fb",
+              "on-secondary": "#ffffff",
+              "on-secondary-fixed": "#00201d",
+              "surface-variant": "#e0e3e5",
+              "surface-dim": "#d8dadc",
+              "tertiary-fixed-dim": "#ffb691",
+              "background": "#f7f9fb",
+              "inverse-surface": "#2d3133",
+              "on-tertiary-fixed-variant": "#773205",
+              "secondary-fixed-dim": "#6bd8cb",
+              "surface-container-lowest": "#ffffff",
+              "on-background": "#191c1e",
+              "error-container": "#ffdad6",
+              "surface-container-highest": "#e0e3e5",
+              "on-tertiary": "#ffffff",
+              "on-secondary-container": "#006f66",
+              "on-tertiary-container": "#f39461",
+              "secondary-fixed": "#89f5e7",
+              "surface-bright": "#f7f9fb",
+              "primary-fixed": "#dce1ff",
+              "inverse-on-surface": "#eff1f3",
+              "secondary-container": "#86f2e4",
+              "on-error-container": "#93000a",
+              "on-primary": "#ffffff",
+              "outline": "#757682",
+              "error": "#ba1a1a",
+              "surface-container-high": "#e6e8ea",
+              "tertiary": "#4b1c00",
+              "surface-tint": "#4059aa",
+              "primary-container": "#1e3a8a",
+              "on-primary-container": "#90a8ff",
+              "primary": "#00236f",
+              "on-primary-fixed-variant": "#264191",
+              "outline-variant": "#c5c5d3",
+              "tertiary-container": "#6e2c00",
+              "inverse-primary": "#b6c4ff",
+              "surface-container-low": "#f2f4f6",
+              "primary-fixed-dim": "#b6c4ff"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"],
+              "manrope": ["Manrope"],
+              "inter": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .tonal-transition { transition: background-color 0.3s ease; }
+      .glass-effect { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- TopNavBar: Updated to match COMPONENTS_3 -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-sm">
+<div class="flex justify-between items-center px-8 py-4 w-full max-w-full">
+<div class="flex items-center space-x-8">
+<span class="text-2xl font-black tracking-tighter text-indigo-900 dark:text-indigo-400 font-manrope">DeskWeave</span>
+<div class="hidden md:flex space-x-6">
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-teal-600 transition-colors duration-300 font-manrope tracking-tight" href="#">Explore</a>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<button class="text-slate-600 dark:text-slate-400 font-medium hover:text-teal-600 transition-colors duration-300 font-manrope tracking-tight scale-95 active:opacity-80">Login</button>
+<button class="bg-indigo-900 text-white px-6 py-2 rounded-lg font-bold hover:opacity-80 transition-all scale-95 active:opacity-80 font-manrope tracking-tight">Register</button>
+</div>
+</div>
+</nav>
+<main class="pt-24 pb-12 px-4 md:px-8 max-w-7xl mx-auto">
+<!-- Header Section with Success/Payment Illustration -->
+<header class="mb-12 relative overflow-hidden rounded-xl bg-primary-container p-8 md:p-12 text-white">
+<div class="relative z-10 md:w-2/3">
+<div class="inline-flex items-center px-3 py-1 bg-secondary text-white rounded-full text-xs font-bold uppercase tracking-wider mb-4">
+                    Status: WAITING_FOR_VERIFICATION
+                </div>
+<h1 class="text-4xl md:text-5xl font-extrabold font-headline tracking-tight leading-tight mb-4">
+                    Hampir Selesai!<br/>Selesaikan Pembayaran Anda.
+                </h1>
+<p class="text-on-primary-container text-lg max-w-lg">
+                    Pesanan Anda telah kami terima. Silakan lakukan transfer manual dan unggah bukti pembayaran agar tim kami dapat segera melakukan verifikasi.
+                </p>
+</div>
+<div class="absolute right-0 top-0 h-full w-1/3 hidden md:block">
+<img alt="Financial illustration" class="h-full w-full object-cover opacity-40 mix-blend-overlay" data-alt="Modern 3D isometric illustration of a floating digital wallet and coins with soft teal and indigo highlights on a dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGDPacOfRpd5MGlHNPp1owuBh8U7X--q1PvXAxeAq4oyvJHLStP-p0epZti8Ymz6fP-h87sUww1_knFedTqkbVcPSLXmvWrXIWjI5otcc9t6bmNa0geVJaruNfUX4QlvrhGGcGvnAX5UVH-XGzhL1ca4-E_DdeFrEnnM_lppMWO98x4HB8PNC2ek2iq5W_-qUpI9JEfl5u2EA6DAlcz0uxiAFlRUpJHAj60uxcibqTTWHaKxNLETr9WA_uVP-bpAlm_a0CGCvF-O0"/>
+</div>
+</header>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Left Column: Order Summary & Instructions -->
+<div class="lg:col-span-8 space-y-8">
+<!-- Order Summary Card -->
+<section class="bg-surface-container-low rounded-xl p-6 md:p-8">
+<h2 class="text-xl font-bold font-headline mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">shopping_bag</span>
+                        Ringkasan Pesanan
+                    </h2>
+<div class="bg-surface-container-lowest rounded-lg p-6 shadow-sm space-y-4">
+<div class="flex justify-between items-start border-b border-surface-variant pb-4">
+<div>
+<h3 class="font-bold text-lg">Private Studio - Level 4</h3>
+<p class="text-sm text-on-surface-variant">Durasi: 1 Bulan (1 Des - 31 Des 2024)</p>
+</div>
+<span class="font-bold text-primary">Rp 4.500.000</span>
+</div>
+<div class="space-y-2 pt-2">
+<div class="flex justify-between text-sm">
+<span class="text-on-surface-variant">Subtotal</span>
+<span>Rp 4.500.000</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-on-surface-variant">Biaya Layanan</span>
+<span>Rp 25.000</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-on-surface-variant text-secondary font-medium">Kode Unik</span>
+<span class="text-secondary font-medium">Rp 742</span>
+</div>
+</div>
+<div class="pt-4 border-t border-surface-variant flex justify-between items-center">
+<span class="text-lg font-bold font-headline">Total Pembayaran</span>
+<span class="text-2xl font-black text-primary">Rp 4.525.742</span>
+</div>
+</div>
+</section>
+<!-- Transfer Instructions -->
+<section class="bg-surface-container-low rounded-xl p-6 md:p-8">
+<h2 class="text-xl font-bold font-headline mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">account_balance</span>
+                        Instruksi Transfer Bank
+                    </h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="bg-surface-container-lowest p-6 rounded-lg shadow-sm border-l-4 border-primary">
+<p class="text-xs font-bold text-on-surface-variant uppercase mb-2 tracking-widest">Bank Central Asia (BCA)</p>
+<p class="text-2xl font-black text-indigo-900 tracking-wider mb-1">8830 192 112</p>
+<p class="text-sm text-on-surface-variant">a.n. PT DeskWeave Teknologi</p>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-lg shadow-sm border-l-4 border-secondary">
+<p class="text-xs font-bold text-on-surface-variant uppercase mb-2 tracking-widest">Bank Mandiri</p>
+<p class="text-2xl font-black text-indigo-900 tracking-wider mb-1">1270 001 229 001</p>
+<p class="text-sm text-on-surface-variant">a.n. PT DeskWeave Teknologi</p>
+</div>
+</div>
+<div class="mt-6 p-4 bg-tertiary-fixed rounded-lg text-on-tertiary-fixed text-sm flex gap-3">
+<span class="material-symbols-outlined">info</span>
+<p>Penting: Mohon transfer tepat hingga <strong>3 digit terakhir (kode unik)</strong> untuk mempercepat proses verifikasi otomatis oleh sistem kami.</p>
+</div>
+</section>
+</div>
+<!-- Right Column: Upload Form -->
+<div class="lg:col-span-4">
+<div class="sticky top-24">
+<section class="bg-surface-container-lowest rounded-xl p-6 shadow-xl border border-surface-variant">
+<h2 class="text-xl font-bold font-headline mb-6">Konfirmasi Pembayaran</h2>
+<form action="#" class="space-y-6">
+<div>
+<label class="block text-sm font-bold text-on-surface-variant mb-2 font-label">Nama Pengirim</label>
+<input class="w-full px-4 py-3 bg-surface-container-low rounded-lg border-none focus:ring-2 focus:ring-primary focus:bg-white transition-all outline-none" placeholder="Sesuai nama di rekening" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-bold text-on-surface-variant mb-2 font-label">Bank Asal</label>
+<select class="w-full px-4 py-3 bg-surface-container-low rounded-lg border-none focus:ring-2 focus:ring-primary focus:bg-white transition-all outline-none">
+<option>BCA</option>
+<option>Mandiri</option>
+<option>BNI</option>
+<option>Lainnya</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-bold text-on-surface-variant mb-2 font-label">Bukti Transfer (JPG/PNG/PDF)</label>
+<div class="relative group">
+<div class="w-full h-40 border-2 border-dashed border-outline-variant rounded-xl flex flex-col items-center justify-center bg-surface-container-low group-hover:bg-surface-container transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-4xl text-outline mb-2">cloud_upload</span>
+<p class="text-xs text-on-surface-variant font-medium">Klik atau seret file ke sini</p>
+</div>
+<input class="absolute inset-0 opacity-0 cursor-pointer" type="file"/>
+</div>
+</div>
+<button class="w-full py-4 bg-gradient-to-r from-primary to-primary-container text-white rounded-lg font-bold font-headline shadow-lg hover:shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all" type="submit">
+                                Kirim Bukti Pembayaran
+                            </button>
+<p class="text-[10px] text-center text-on-surface-variant uppercase tracking-widest mt-4">
+                                Verifikasi membutuhkan waktu 10-30 menit pada jam operasional.
+                            </p>
+</form>
+</section>
+<div class="mt-6 flex items-center justify-center gap-4 text-outline">
+<span class="material-symbols-outlined">security</span>
+<span class="text-xs font-medium">Pembayaran Terenkripsi &amp; Aman</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer: Updated to match COMPONENTS_3 -->
+<footer class="w-full py-12 px-8 mt-24 bg-slate-50 dark:bg-slate-950">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-7xl mx-auto">
+<div class="md:col-span-1">
+<span class="text-lg font-black text-indigo-900 dark:text-indigo-400 font-manrope uppercase tracking-widest">DeskWeave</span>
+<p class="mt-4 text-slate-400 font-inter text-xs uppercase tracking-widest">© 2024 DeskWeave. The Digital Architect's Workspace.</p>
+</div>
+<div class="flex flex-col space-y-3">
+<a class="text-slate-400 font-inter text-xs uppercase tracking-widest hover:text-indigo-900 dark:hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="text-slate-400 font-inter text-xs uppercase tracking-widest hover:text-indigo-900 dark:hover:text-white transition-colors" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col space-y-3">
+<a class="text-slate-400 font-inter text-xs uppercase tracking-widest hover:text-indigo-900 dark:hover:text-white transition-colors" href="#">Help Center</a>
+<a class="text-slate-400 font-inter text-xs uppercase tracking-widest hover:text-indigo-900 dark:hover:text-white transition-colors" href="#">Contact Us</a>
+</div>
+<div class="flex flex-col space-y-3">
+<a class="text-slate-400 font-inter text-xs uppercase tracking-widest hover:text-indigo-900 dark:hover:text-white transition-colors" href="#">About</a>
+</div>
+</div>
+</footer>
+</body></html>
