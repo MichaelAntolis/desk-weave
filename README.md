@@ -96,6 +96,3 @@ Deskweave adalah platform *workspace marketplace* mutakhir yang menjembatani pem
 
 ---
 
-## 📄 Lisensi
-
-Proyek ini dikembangkan untuk keperluan manajemen ruang kerja profesional. Seluruh hak cipta dilindungi.
