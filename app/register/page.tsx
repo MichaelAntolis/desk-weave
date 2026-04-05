@@ -9,6 +9,8 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import { register } from "@/lib/actions/auth";
 
+import AuthLayout from "@/components/layout/AuthLayout";
+
 export default function RegisterPage() {
   const [showPassword, setShowPassword] = useState(false);
   const [selectedRole, setSelectedRole] = useState<"TENANT" | "OWNER">("TENANT");
@@ -31,7 +33,8 @@ export default function RegisterPage() {
   }
 
   return (
-    <main className="flex-grow flex items-stretch min-h-screen">
+    <AuthLayout>
+      <main className="flex-grow flex items-stretch min-h-screen">
       {/* Visual Column */}
       <div className="hidden lg:flex w-1/2 relative overflow-hidden bg-primary-container">
         <div className="absolute inset-0 z-0">
@@ -236,5 +239,6 @@ export default function RegisterPage() {
         </div>
       </div>
     </main>
+    </AuthLayout>
   );
 }

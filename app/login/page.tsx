@@ -9,11 +9,15 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { login } from "@/lib/actions/auth";
 
+import AuthLayout from "@/components/layout/AuthLayout";
+
 export default function LoginPage() {
   return (
-    <Suspense>
-      <LoginContent />
-    </Suspense>
+    <AuthLayout>
+      <Suspense>
+        <LoginContent />
+      </Suspense>
+    </AuthLayout>
   );
 }
 
